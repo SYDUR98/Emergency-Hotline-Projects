@@ -25,12 +25,12 @@
             <div class="heart flex items-center gap-5">
                 <div class="flex items-center gap-2 px-3 py-2 rounded-3xl bg-[#41ff6b1a]">
                     <!-- love icon  -->
-                    <p class="text-center"><span>0</span></p>
-                    <img id="love_Icon" class="w-[30px] h-[30px]" src="assets/heart.png" alt="">
+                    <p class="text-center"><span id="manu_love_icon_count">1</span></p>
+                    <img  class="w-[30px] h-[30px]" src="assets/heart.png" alt="">
                 </div>
                 <div class="flex items-center gap-2 bg-[#41ff6b1a] rounded-3xl px-3 py-2">
                     <!-- coin icon  -->
-                    <p class="text-center"><span>100</span></p>
+                    <p class="text-center"><span id="manue_coin_count">100</span></p>
                     <img class="w-[30px] h-[30px]" src="assets/coin.png" alt="">
                 </div>
                 <div>
@@ -47,10 +47,11 @@
     </header>
     <main class=" bg-gray-100 min-h-[100vh]">
         <br><br>
-        <div class="emergency_number w-[436px] bg-white p-[32px] rounded-lg">
+        <div class="all_body flex justify-between p-10">
+            <div class="emergency_number w-[436px] bg-white p-[32px] rounded-lg">
             <div class="img&icon flex justify-between items-center">
                 <img src="assets/emergency.png" alt="">
-                <i class="fa-regular fa-heart"></i>
+                <i id="card_love_icon" class="fa-regular fa-heart cursor-pointer"></i>
             </div>
             <div class="text">
                 <h2 class="font-bold text-[24px]">National Emergency Number</h2>
@@ -61,17 +62,57 @@
             <div class="flex justify-between items-center mt-5">
                 <button class="px-16 py-2 btn btn-outline rounded-lg"><i class="fa-solid fa-copy"></i>
                     Copy</button>
-                <button class="btn bg-[#00a63e] text-white px-16 py-2 rounded-lg"><i class="fa-solid fa-phone"></i></i>Call</button>
+                <button class="btn bg-[#00a63e] text-white px-16 py-2 rounded-lg"><i class="fa-solid fa-phone"></i></i><span id="card_call_icon">Call</span></button>
             </div>
         </div>
+        <div class="history w-[400px] bg-white p-[32px] rounded-lg">
+            <div class="flex justify-between items-center">
+                <h1> <i class="fa-regular fa-clock"></i>  Call History</h1>
+                <button class="bg-[#00a63e] px-5 py-1 rounded-3xl text-white">Clear</button>
+            </div>
+        </div>
+        </div>
     </main>
-    love icon js
 
     <script>
+        // global array to story history 
+        const historyArray = []
+
+
         // love icon js
-        document.getElementById('love_Icon').addEventListener('click',function(){
-            console.log('love icon click')
+        document.getElementById('card_love_icon').addEventListener('click',function(){
+            const manuLoveIconCount = parseInt(document.getElementById('manu_love_icon_count').innerText);
+            console.log(manuLoveIconCount)
+            newManuLoveIconCount = manuLoveIconCount + 1;
+            document.getElementById('manu_love_icon_count').innerText = newManuLoveIconCount;
         })
+
+        // calling icon js 
+        document.getElementById('card_call_icon').addEventListener('click',function(){
+            // console.log('call icon clicked')
+            const manueCoinCount = parseInt(document.getElementById('manue_coin_count').innerText)
+            // console.log(manueCoinCount)
+            if(manueCoinCount<20){
+                alert('Insufficient coin to call')
+                retrun
+            }
+
+            alert("Calling National Emergency Number - 999")
+            const newManuCoinCount = manueCoinCount - 20;
+            // console.log(newManuCoinCount)
+            document.getElementById('manue_coin_count').innerText = newManuCoinCount;
+
+            // push history in an array 
+            const callHistory = {
+                name : "National Emergency Number",
+                number: 999,
+                time : new Date().toLocaleTimeString()
+            }
+            historyArray.push(callHistory)
+            // console.log(historyArray)
+        })
+        
+
 
     </script>
 </body>
