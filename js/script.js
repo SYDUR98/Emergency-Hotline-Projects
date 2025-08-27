@@ -233,12 +233,12 @@
 
 
          // =========================== Women & Child Helpline section js start ===========================
-        document.getElementById('ambulance_card4_love_icon').addEventListener('click', function () {
+        document.getElementById('women_card5_love_icon').addEventListener('click', function () {
             heartCount('manu_love_icon_count')
         })
 
         // calling icon js 
-        document.getElementById('ambulance_card4_call_icon').addEventListener('click', function () {
+        document.getElementById('women_card5_call_icon').addEventListener('click', function () {
             alert("Ambulance Service -1994-999999")
             callCoinCount('manue_coin_count')
 
@@ -248,8 +248,8 @@
             newElement.innerHTML = `
             <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
                     <div class="">
-                        <h3 class="font-semibold text-[18px]">Ambulance Service</h3>
-                        <h4 class="text-[18px] text-[#5c5c5c]">1994-999999</h4>
+                        <h3 class="font-semibold text-[18px]">Women & Child Helpline</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">109</h4>
                     </div>
                     <div>
                         <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
@@ -261,8 +261,8 @@
 
         })
         // copy btn functionality js
-        document.getElementById('ambulance_card4_copy_btn').addEventListener('click',function(){
-            copyPaste('amb_number')
+        document.getElementById('women_card5_copy_btn').addEventListener('click',function(){
+            copyPaste('women_number')
             copyCount('manu_copy_count')
         });
 
