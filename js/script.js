@@ -4,8 +4,7 @@
             // console.log(manuLoveIconCount)
             newManuLoveIconCount = manuLoveIconCount + 1;
             document.getElementById(id).innerText = newManuLoveIconCount;
-        }
-        
+        }  
     //reusable functions hart end 
 
     // reusable functions call section start
@@ -16,12 +15,10 @@
                 alert('Insufficient coin to call')
                 retrun
             }
-            alert("Calling National Emergency Number - 999")
+            
             const newManuCoinCount = manueCoinCount - 20;
             // console.log(newManuCoinCount)
-            document.getElementById(id).innerText = newManuCoinCount;
-
-            
+            document.getElementById(id).innerText = newManuCoinCount;    
          }
         // reusable functions call section end  
         
@@ -35,7 +32,6 @@
             .catch(err =>{
                 console.error("Failed to copy:", err)
             });
-
         }  
         //reusable copy paste reusable functions end
         
@@ -46,10 +42,15 @@
             document.getElementById(id).innerText = newManuCopyCount;
          }
         //reusable copy count functions end 
-        
+        //============================re usabale function end ============================= 
 
+         // history Clean section start.
+        document.getElementById('history_clean_btn').addEventListener('click',function(){
+            document.getElementById('history_create').innerHTML = ``
+        })
+        // history Clean section end.
 
-        // love icon js
+        // =========================== emergency section js start ===========================
         document.getElementById('card_love_icon').addEventListener('click', function () {
             // const manuLoveIconCount = parseInt(document.getElementById('manu_love_icon_count').innerText);
             // console.log(manuLoveIconCount)
@@ -60,7 +61,7 @@
 
         // calling icon js 
         document.getElementById('card_call_icon').addEventListener('click', function () {
-            
+            alert("Calling National Emergency Number - 999")
             callCoinCount('manue_coin_count')
 
             const parentElement = document.getElementById('history_create');
@@ -81,12 +82,6 @@
             parentElement.appendChild(newElement)
 
         })
-
-        // history Clean section .
-        document.getElementById('history_clean_btn').addEventListener('click',function(){
-            document.getElementById('history_create').innerHTML = ``
-        })
-
         // copy btn functionality js
         document.getElementById('card_copy_btn').addEventListener('click',function(){
             // alert("999 number copid")
@@ -99,7 +94,7 @@
             // .catch(err =>{
             //     console.error("Failed to copy:", err)
             // });
-            copyPaste('em_number')
+            copyPaste('am_number')
 
             // const manuCopyCount = parseInt(document.getElementById('manu_copy_count').innerText)
             // const newManuCopyCount = manuCopyCount + 1;
@@ -107,3 +102,169 @@
 
             copyCount('manu_copy_count')
         });
+
+         // =========================== emergency section js end ===========================
+
+
+
+
+
+
+         // =========================== fire section js start ===========================
+        document.getElementById('fire-card2_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('fire_card2_call_icon').addEventListener('click', function () {
+            alert("Fire Service Number - 999")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Fire Service Number</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">999</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('fire_card2_copy_btn').addEventListener('click',function(){
+            copyPaste('em_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== fire section js end ===========================
+
+
+
+         
+
+        // =========================== police section js start ===========================
+        document.getElementById('police_card3_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('police_card3_call_icon').addEventListener('click', function () {
+            alert("Police Helpline Number - 999")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Police Helpline Number</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">999</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('fire_card3_copy_btn').addEventListener('click',function(){
+            copyPaste('em_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== police section js end ===========================
+
+
+
+
+
+
+         // =========================== ambulance section js start ===========================
+        document.getElementById('ambulance_card4_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('ambulance_card4_call_icon').addEventListener('click', function () {
+            alert("Ambulance Service -1994-999999")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Ambulance Service</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">1994-999999</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('ambulance_card4_copy_btn').addEventListener('click',function(){
+            copyPaste('amb_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== ambulance section js end ===========================
+
+
+
+
+
+
+         // =========================== Women & Child Helpline section js start ===========================
+        document.getElementById('ambulance_card4_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('ambulance_card4_call_icon').addEventListener('click', function () {
+            alert("Ambulance Service -1994-999999")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Ambulance Service</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">1994-999999</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('ambulance_card4_copy_btn').addEventListener('click',function(){
+            copyPaste('amb_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== Women & Child Helpline section js end ===========================
+        
