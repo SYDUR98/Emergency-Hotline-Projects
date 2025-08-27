@@ -25,7 +25,7 @@
             <div class="heart flex items-center gap-5">
                 <div class="flex items-center gap-2 px-3 py-2 rounded-3xl bg-[#41ff6b1a]">
                     <!-- love icon  -->
-                    <p class="text-center"><span id="manu_love_icon_count">1</span></p>
+                    <p class="text-center"><span id="manu_love_icon_count">0</span></p>
                     <img class="w-[30px] h-[30px]" src="assets/heart.png" alt="">
                 </div>
                 <div class="flex items-center gap-2 bg-[#41ff6b1a] rounded-3xl px-3 py-2">
@@ -45,12 +45,13 @@
                 – A Project by Government of the People’s Republic of Bangladesh</p>
         </div>
     </header>
+    <!-- cards section added  -->
     <main class=" bg-gray-100 min-h-[100vh]">
         <br><br>
         <div class="all_body flex justify-between p-10 ">
             <div class="emergency_number w-[436px] bg-white p-[32px] rounded-lg shadow-lg">
                 <div class="img&icon flex justify-between items-center">
-                    <img src="assets/emergency.png" alt="">
+                    <img class="w-[50px] h-[50px] bg-[#ffe3e2] p-3 rounded-xl" src="assets/emergency.png" alt="">
                     <i id="card_love_icon" class="fa-regular fa-heart cursor-pointer"></i>
                 </div>
                 <div class="text">
@@ -58,7 +59,7 @@
                     <p class="text-[18px] text-[#5c5c5c]">National Emergency</p>
                 </div>
                 <h1 class="font-bold text-[24px] mt-3">999</h1>
-                <p>All</p>
+                <span class="bg-[#f2f2f2] px-2 py-1 rounded-lg">All</span>
                 <div class="flex justify-between items-center mt-5">
                     <button class="px-16 py-2 btn btn-outline rounded-lg"><i class="fa-solid fa-copy"></i>
                         Copy</button>
@@ -68,8 +69,8 @@
             </div>
             <div class="history w-[400px] bg-white p-[32px] rounded-lg">
                 <div class="flex justify-between items-center">
-                    <h1 id="history_clean_btn"> <i class="fa-regular fa-clock"></i> Call History</h1>
-                    <button class="bg-[#00a63e] px-5 py-1 rounded-3xl text-white hover:bg-sky-700">Clear</button>
+                    <h1 > <i class="fa-regular fa-clock"></i> Call History</h1>
+                    <button id="history_clean_btn" class="bg-[#00a63e] px-5 py-1 rounded-3xl text-white hover:bg-sky-700">Clear</button>
                 </div>
                 <!-- <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
                     <div class="">
@@ -140,8 +141,11 @@
 
         })
 
-        // history Clean section 
-        
+        // history Clean section .
+        document.getElementById('history_clean_btn').addEventListener('click',function(){
+            document.getElementById('history_create').innerHTML = ``
+        })
+
 
     </script>
 </body>
