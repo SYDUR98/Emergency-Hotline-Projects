@@ -94,7 +94,7 @@
             // .catch(err =>{
             //     console.error("Failed to copy:", err)
             // });
-            copyPaste('am_number')
+            copyPaste('em_number')
 
             // const manuCopyCount = parseInt(document.getElementById('manu_copy_count').innerText)
             // const newManuCopyCount = manuCopyCount + 1;
@@ -140,7 +140,7 @@
         })
         // copy btn functionality js
         document.getElementById('fire_card2_copy_btn').addEventListener('click',function(){
-            copyPaste('em_number')
+            copyPaste('fire_number')
             copyCount('manu_copy_count')
         });
 
@@ -180,7 +180,7 @@
         })
         // copy btn functionality js
         document.getElementById('fire_card3_copy_btn').addEventListener('click',function(){
-            copyPaste('em_number')
+            copyPaste('police_number')
             copyCount('manu_copy_count')
         });
 
@@ -288,7 +288,7 @@
             <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
                     <div class="">
                         <h3 class="font-semibold text-[18px]">Anti-Corruption Helpline</h3>
-                        <h4 class="text-[18px] text-[#5c5c5c]">109</h4>
+                        <h4 class="text-[18px] text-[#5c5c5c]">106</h4>
                     </div>
                     <div>
                         <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
@@ -411,7 +411,7 @@
             newElement.innerHTML = `
             <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
                     <div class="">
-                        <h3 class="font-semibold text-[18px]">Bangladesh Railway</h3>
+                        <h3 class="font-semibold text-[18px]">Bangladesh Railway Helpline</h3>
                         <h4 class="text-[18px] text-[#5c5c5c]">163</h4>
                     </div>
                     <div>
