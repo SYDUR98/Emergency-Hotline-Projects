@@ -345,10 +345,96 @@
             copyCount('manu_copy_count')
         });
 
-         // =========================== electricity Helpline section js end ===========================  
+         // =========================== electricity Helpline section js end =========================== 
+         
+         
+
+
+
+
+
+         // =========================== Brac Helpline section js start ===========================
+        document.getElementById('brac_card8_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('brac_card8_call_icon').addEventListener('click', function () {
+            alert("Brac Helpline -16445")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Brac Helpline</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">16445</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('brac_card8_copy_btn').addEventListener('click',function(){
+            copyPaste('brac_card8_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== Brac Helpline section js end ===========================  
+
+
+
+
+
+
+
+         // =========================== Bangladesh Railway Helpline section js start ===========================
+        document.getElementById('railway_card9_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('railway_card9_call_icon').addEventListener('click', function () {
+            alert("Bangladesh Railway -163")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Bangladesh Railway</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">163</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('railway_card9_copy_btn').addEventListener('click',function(){
+            copyPaste('railway_card9_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== Bangladesh Railway Helpline section js end ===========================  
         
 
 
+
+         
 
 
 
