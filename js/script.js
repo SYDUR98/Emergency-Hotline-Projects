@@ -232,14 +232,14 @@
 
 
 
-         // =========================== Women & Child Helpline section js start ===========================
+        // =========================== Women & Child Helpline section js start ===========================
         document.getElementById('women_card5_love_icon').addEventListener('click', function () {
             heartCount('manu_love_icon_count')
         })
 
         // calling icon js 
         document.getElementById('women_card5_call_icon').addEventListener('click', function () {
-            alert("Ambulance Service -1994-999999")
+            alert("Women & Child Helpline -109")
             callCoinCount('manue_coin_count')
 
             const parentElement = document.getElementById('history_create');
@@ -267,4 +267,49 @@
         });
 
          // =========================== Women & Child Helpline section js end ===========================
+
+
+
+
+         // =========================== Anti Helpline section js start ===========================
+        document.getElementById('anti_card6_love_icon').addEventListener('click', function () {
+            heartCount('manu_love_icon_count')
+        })
+
+        // calling icon js 
+        document.getElementById('anti_card6_call_icon').addEventListener('click', function () {
+            alert("Anti-Corruption Helpline -109")
+            callCoinCount('manue_coin_count')
+
+            const parentElement = document.getElementById('history_create');
+
+            const newElement = document.createElement('section')
+            newElement.innerHTML = `
+            <div class=" flex justify-between items-center bg-[#fafafa] p-3 rounded-md mt-5">
+                    <div class="">
+                        <h3 class="font-semibold text-[18px]">Anti-Corruption Helpline</h3>
+                        <h4 class="text-[18px] text-[#5c5c5c]">109</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-[18px]">${new Date().toLocaleTimeString()}</h4>
+                    </div>
+                </div>
+            
+            `
+            parentElement.appendChild(newElement)
+
+        })
+        // copy btn functionality js
+        document.getElementById('anti_card6_copy_btn').addEventListener('click',function(){
+            copyPaste('anti_card6_number')
+            copyCount('manu_copy_count')
+        });
+
+         // =========================== Anti Helpline section js end ===========================
+
+
+
+
+
+         
         
