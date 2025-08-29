@@ -11,7 +11,7 @@ Ans: ***(1.1)- getElementById: getElementById is a DOM Method that used to searc
 2. How do you **create and insert a new element into the DOM**?
 ***(2)- html code :
  <div id="container">
-    <h2>My Container</h2>
+    
   </div> 
   js code : 
   const parentElement = document.getElementById("container");
