@@ -1,7 +1,3 @@
-**********************************Additional information:***************************************** 
-"I have made it responsive for iPhone 12 Pro (390 X 844) and large devices."
-**************************************************************************************************
-
 
 Answer the following questions:
 
